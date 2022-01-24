@@ -9,4 +9,4 @@
 	url = https://github.com/darkforest-eth/circuits
 [submodule "packages"]
 	path = packages
-	url = https://github.com/darkforest-eth/packages.git
+	url = https://github.com/darkforest-eth/packages
