@@ -16,6 +16,10 @@ It also uses Yarn, a package manager and that allows for multiple **workspaces**
 The **workspaces** allows each [submodule](.gitmodules) to have their own packages and configuration. 
 Yarn places all of the packages for each submodule in the top level `node_modules/` folder.
 
+## Builder's Guide
+
+For a full tutorial with multiple **quests**, check out the Community Round Builder's [Guide](https://www.notion.so/Community-Round-Builder-s-Guide-4e61127b53684a61abb5ecc52bf00ff0).
+
 ## Requirements
 * Install [Yarn](https://classic.yarnpkg.com/en/docs/install)
 * Install `node >= 16` [nvm](https://github.com/nvm-sh/nvm)
@@ -55,9 +59,6 @@ Yarn places all of the packages for each submodule in the top level `node_module
     * run `export NODE_OPTIONS=--openssl-legacy-provider`
     * Note: This error occurs when using Node v17+
 
-## Explanation of `.gitmodules`
-
-
 ## Run a local game
 
 - After running `yarn start`, which will 1) start a local node, 2) deploy the contracts, and 3) run the local client in dev mode
@@ -68,9 +69,11 @@ Yarn places all of the packages for each submodule in the top level `node_module
     2. `0x523170AAE57904F24FFE1F61B7E4FF9E9A0CE7557987C2FC034EACB1C267B4AE`
     3. `0x67195c963ff445314e667112ab22f4a7404bad7f9746564eb409b9bb8c6aed32`
 
-## Edit a local game
+## Run a public local game
 
-See [tweaks](tweaks.md)
+If you want other people to be able to interact with the DF game on your local machine, run `yarn start:tunnel`
+
+This uses the [localtunnel](https://github.com/localtunnel/localtunnel) library to allow public access to localhost:8081 and the JSON-RPC provider at localhost:8545. 
 
 ## Static deployment of Dark Forest (no webserver)
 
